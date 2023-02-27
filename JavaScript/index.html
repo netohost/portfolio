@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Curso JS</title>
+</head>
+<body>
+  
+<form onsubmit="EnviarIdade()" id="form">
+
+  <label>Idade:</label> <br>
+
+  <input type="number"placeholder='Idade' id="age">
+
+  <br><br>
+
+<button type="submit">Enviar</button>
+
+<script>
+
+  const form = document.getElementById('form')
+
+  form.addEventListener('submit', EnviarIdade);
+
+  function EnviarIdade(){
+  const idade = document.getElementById('age');
+
+  if(idade.value >= 18){
+    alert('Você é maior de idade.')
+  } 
+  else {
+    alert('Você é menor de idade.')
+  }
+
+}
+</script>
+
+</form>
+</body>
+</html>
